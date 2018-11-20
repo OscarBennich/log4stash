@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>log4stash</id>
-    <version>2.2.2</version>
+    <version>222.22.2</version>
     <authors>urielha</authors>
     <owners>urielha</owners>
     <title>log4stash - Elasticsearch log4net appender</title>
@@ -26,16 +26,16 @@
     <dependencies>
 		
 		<group targetFramework=".NETFramework4.0">
-			<dependency id="log4net" version="2.0.8.0" />
+			<dependency id="log4net" version="1.2.10.0" />
 			<dependency id="RestSharp" version="105.2.3" />
 			<dependency id="Microsoft.Bcl.Async" version="1.0.168" />
 		</group>
 		<group targetFramework=".NETFramework4.5">
-			<dependency id="log4net" version="2.0.8.0" />
+			<dependency id="log4net" version="1.2.10.0" />
 			<dependency id="RestSharp" version="105.2.3" />
 		</group>
 		<group targetFramework=".NETStandard2.0">
-			<dependency id="log4net" version="2.0.8.0" />
+			<dependency id="log4net" version="1.2.10.0" />
 			<dependency id="RestSharp" version="106.1.0" />
 			<dependency id="System.Security.Permissions" version="4.4.0" />
 		</group>

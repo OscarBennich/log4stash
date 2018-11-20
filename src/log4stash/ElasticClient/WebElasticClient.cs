@@ -64,7 +64,7 @@ namespace log4stash
         public override void PutTemplateRaw(string templateName, string rawBody)
         {
             var url = string.Concat("_template/", templateName);
-            var restRequest = new RestRequest(url, Method.PUT) {RequestFormat = DataFormat.Json};
+            var restRequest = new RestRequest(url, Method.PUT) { RequestFormat = DataFormat.Json };
             restRequest.AddParameter("application/json", rawBody, ParameterType.RequestBody);
             RestClient.ExecuteAsync(restRequest, response => { });
         }
@@ -133,7 +133,7 @@ namespace log4stash
             }
             catch (Exception ex)
             {
-                LogLog.Error(GetType(), "Invalid request to ElasticSearch", ex);
+                LogLog.Error("Invalid request to ElasticSearch", ex);
                 return;
             }
 
@@ -143,7 +143,7 @@ namespace log4stash
             }
             catch (Exception ex)
             {
-                LogLog.Error(GetType(), "Got error while reading response from ElasticSearch", ex);
+                LogLog.Error("Got error while reading response from ElasticSearch", ex);
             }
         }
 
@@ -156,7 +156,7 @@ namespace log4stash
             }
             catch (Exception ex)
             {
-                LogLog.Error(GetType(), "Invalid request to ElasticSearch", ex);
+                LogLog.Error("Invalid request to ElasticSearch", ex);
                 return;
             }
 
@@ -166,7 +166,7 @@ namespace log4stash
             }
             catch (Exception ex)
             {
-                LogLog.Error(GetType(), "Got error while reading response from ElasticSearch", ex);
+                LogLog.Error("Got error while reading response from ElasticSearch", ex);
             }
 
         }

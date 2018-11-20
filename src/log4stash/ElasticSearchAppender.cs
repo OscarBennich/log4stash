@@ -139,7 +139,7 @@ namespace log4stash
         {
             if(!string.IsNullOrEmpty(BasicAuthUsername) && !string.IsNullOrEmpty(BasicAuthPassword))
             {
-                LogLog.Warn(GetType(), "BasicAuthUsername & BasicAuthPassword tags are obsolete, Please use AuthenticationMethod new tag");
+                LogLog.Warn( "BasicAuthUsername & BasicAuthPassword tags are obsolete, Please use AuthenticationMethod new tag");
                 var auth = new BasicAuthenticationMethod { Username = BasicAuthUsername, Password = BasicAuthPassword };
                 AuthenticationMethod.AddBasic(auth);
             }
@@ -179,7 +179,7 @@ namespace log4stash
             if (DropEventsOverBulkLimit && _bulk.Count >= BulkSize)
             {
                 _tolerateCalls.Call(() =>
-                    LogLog.Warn(GetType(),
+                    LogLog.Warn(
                         "Message lost due to bulk overflow! Set DropEventsOverBulkLimit to false in order to prevent that."),
                     GetType(), 0);
                 return;
@@ -245,7 +245,7 @@ namespace log4stash
                 }
                 catch (Exception ex)
                 {
-                    LogLog.Error(GetType(), "IElasticsearchClient inner exception occurred", ex);
+                    LogLog.Error("IElasticsearchClient inner exception occurred", ex);
                 }
             }
         }

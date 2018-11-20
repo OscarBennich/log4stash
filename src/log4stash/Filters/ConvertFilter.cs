@@ -89,7 +89,7 @@ namespace log4stash.Filters
                 return num;
             }
 
-            LogLog.Warn(GetType(), 
+            LogLog.Warn(
                 string.Format("Could not convert {0} of type: {1} to int", arg, arg.GetType()));
             return 0;
         }

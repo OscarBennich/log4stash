@@ -20,13 +20,13 @@ namespace log4stash
         {
             if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(FileName))
             {
-                LogLog.Error(GetType(), "Template name or fileName is empty!");
+                LogLog.Error("Template name or fileName is empty!");
                 return;
             }
 
             if (!File.Exists(FileName))
             {
-                LogLog.Error(GetType(), string.Format("Could not find template file: {0}", FileName));
+                LogLog.Error(string.Format("Could not find template file: {0}", FileName));
                 return;
             }
 
